@@ -1,11 +1,13 @@
 # Fortuna - find price data easily and immediately using an LLM
 
-The goal of this project is to show how easy it is to interact with an LLM for the purpose of data discovery and obtainment; in particular, this software uses an LLM to handle the following aspects:
+The goal of this project is to show how easy it is to interact with an LLM for the purpose of data discovery and obtainment.
+
+In particular, this software uses an LLM to handle the following aspects:
 
 * where on the internet to find the data
 * how to obtain the data and then automatically writing python code
 * an option to immediately run the python code
-* finally, printing both the python code and the data to stdout console
+* prints both the python code and the output data to stdout console
     * the output can then, in theory, be used as part of an ETL process
     * alternatively the end-user can copy python code and use it in other projects
 
@@ -22,9 +24,9 @@ Right now it can find data for the following:
 
 This is primarily meant to be a simple experiment and not necessarily a production worthy system.
 
-Since the entire point of using an LLM is because you want super-human capabilities, this type of system would be applicable only in certain situations. When dealing with problem of data discovery, it might be nice to obtain data from a number of sources all at once, or examine a large pool of potential sources and prototype easily.
+Since the entire point of using an LLM is because you want super-human capabilities, this type of system would be applicable only in certain situations. When dealing with problem of data discovery, it might be nice to obtain data from a number of sources all at once, or examine a large pool of potential sources and prototype easily. Another issue is that data is found is a large variety of formats and so it would be nice to standardize this somehow and offer an omni-interface for ease-of-use.
 
-This problem is interesting since it demonstrates the scope of what is required for an LLM-based system to produce a useful result.
+These problems are interesting since it demonstrates the scope of what is required for an LLM-based system to produce a useful result.
 
 A possible architecture for a production-worthy system, plus some ways to extend it, would be as follows:
 
@@ -45,7 +47,7 @@ A possible architecture for a production-worthy system, plus some ways to extend
     * one interesting angle might be to have the LLM handle analytics via generation of python code; which could become a tool for data analysis by offering the ability to rapidly prototype new ideas
 
 * a method to have the first or second LLM re-run in the scenario where output failed
-    * the output of an LLM is somewhat deterministic unless very specific prompts are used
+    * the output of an LLM is somewhat non-deterministic unless very specific prompts are used
     * would need some sort of way to re-run
     * a fallback non-LLM system could help with this as well
 
